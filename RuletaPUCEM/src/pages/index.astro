@@ -1,0 +1,38 @@
+---
+import Ruleta from '../components/Ruleta.astro';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RuletaPUCEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 20px;
+        background-image: url('/assets/aepucem.png');
+        background-size: 800px auto; /* Ancho fijo, alto automático */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* Opcional: añadir un filtro si deseas oscurecer o desenfocar un poco */
+      .overlay {
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(2px);
+        min-height: 100vh;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <Ruleta />
+    </div>
+  </body>
+</html>
